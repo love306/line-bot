@@ -45,6 +45,11 @@ def handle_message(event):
             package_id='1',
             sticker_id='1'
         )
+        line_bot_api.reply_message(
+            event.reply_token,
+            sticker_message)
+
+        return
     if msg in ['哈囉', 'hi', 'Hi']:
         s = '哈囉模投'
     elif msg in ['你是誰', '你是']:
