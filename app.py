@@ -41,15 +41,17 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = random.randint(11537, 11539)
-    if r == 11537:
-        rr = random.randint(52002734, 52002733)
-    elif r == 11538:
-        rr = random.randint(51626494, 51626533)
-    elif r == 11539:
-        rr = random.randint(52114210, 52114149)
+    
 
 
     if msg in ['給我貼圖', '貼圖', 'sticker']:
+
+        if r == 11537:
+            rr = random.randint(52002734, 52002773)
+        elif r == 11538:
+            rr = random.randint(51626494, 51626533)
+        elif r == 11539:
+            rr = random.randint(52114210, 52114149)
         sticker_message = StickerSendMessage(
             package_id=r,
             sticker_id=rr
