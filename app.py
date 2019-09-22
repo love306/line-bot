@@ -49,7 +49,7 @@ def handle_message(event):
             event.reply_token,
             sticker_message)
 
-        return
+        
     if msg in ['哈囉', 'hi', 'Hi']:
         s = '哈囉模投'
     elif msg in ['你是誰', '你是']:
@@ -58,7 +58,8 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=s
         ))
-
+        return
+        
 
 if __name__ == "__main__":
     app.run()
