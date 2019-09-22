@@ -38,12 +38,20 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    s = 'have lanch?'
-    line_bot_api.reply_message(
-        event.reply_token,
-        StickerSendMessage(
+    s = '母鯊大，公鯊?'
+
+    if msg in ['給我貼圖', '貼圖', 'sticker']:
+        sticker_message = StickerSendMessage(
             package_id='1',
             sticker_id='1'
+        )
+    if msg in ['哈囉', 'hi', 'Hi']:
+        s = '哈囉模投'
+    elif msg in ['你是誰', '你是']:
+        s = '大家好，我是人工智障機器人'
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=s
         ))
 
 
