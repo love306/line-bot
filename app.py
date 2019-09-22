@@ -52,6 +52,8 @@ def handle_message(event):
             rr = random.randint(51626494, 51626533)
         elif r == 11539:
             rr = random.randint(52114210, 52114149)
+        r = str(r)
+        rr = str(rr)
         sticker_message = StickerSendMessage(
             package_id=r,
             sticker_id=rr
