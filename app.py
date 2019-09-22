@@ -59,7 +59,7 @@ def handle_message(event):
             TextSendMessage(text=s
         ))
         return
-        
+
 
 if __name__ == "__main__":
     app.run()
