@@ -50,7 +50,7 @@ def handle_message(event):
             sticker_message)
 
         
-    if msg == '哈囉':
+    if msg in ['hi', 'hallow']:
         s = '哈囉模投'
     elif msg in ['你是誰', '你是']:
         s = '大家好，我是人工智障機器人'
