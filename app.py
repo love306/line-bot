@@ -54,8 +54,6 @@ def handle_message(event):
         s = '哈囉模投'
     elif msg in ['你是誰', '你是']:
         s = '大家好，我是人工智障機器人'
-    elif msg in ['您好', '哈囉']:
-        s = '哈囉摩投'
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=s
