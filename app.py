@@ -54,11 +54,11 @@ def handle_message(event):
         s = '哈囉模投'
     elif msg in ['你是誰', '你是']:
         s = '大家好，我是人工智障機器人'
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=s
-        ))
-        return
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=s
+    ))
+    return
 
 
 if __name__ == "__main__":
